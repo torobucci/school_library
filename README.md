@@ -4,14 +4,14 @@
 <img src="https://cdn-icons-png.flaticon.com/512/6132/6132219.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Enumerable Ruby</b></h3>
+  <h3><b>School Library</b></h3>
 
 </div>
 
 # 📗 Table of Contents
 
 - [� Table of Contents](#-table-of-contents)
-- [📖  Enumerable Ruby](#--enumerable-ruby)
+- [📖 School Library](#--school-library)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -27,9 +27,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖  <a name="about-project">Enumerable Ruby</a>
+# 📖  <a name="about-project">School library</a>
 
-Simple ruby program that defines the all?, any? and, filter methods of [Enumerable]()
+Simple School library built based on classes and OOP priciples
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,9 +41,9 @@ Simple ruby program that defines the all?, any? and, filter methods of [Enumerab
 
 ### Key Features <a name="key-features"></a>
 
-- Uses a module
-- Implement methods in a class
-- Uses Ruby blocks.
+- Classes
+- Methods
+- Inheritance
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -94,25 +94,13 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **AKPAN DANIEL**
-
-- GitHub: [@danutibe07](https://github.com/danutibe07)
-- Twitter: [@Danielutibe07](https://twitter.com/Danielutibe07?t=2kvKPTZQ7IGCw2FugE9xCQ&s=09)
-- LinkedIn: [Akpan Daniel](https://www.linkedin.com/in/danutibe07/)
-
-👤 **Zewdie Habtie**
-- GitHub: [ZewdieMc](https://github.com/ZewdieMc)
-- Twitter: [@HabtieZewdie](https://twitter.com/HabtieZewdie)
-- LinkedIn: [Zewdie Habtie](https://www.linkedin.com/in/zewdiehabtie/)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 👤 **Kevin Toro**
 - GitHub: [@torobucii](https://github.com/torobucci)
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
 - LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [] Add Inheritance
+- Simple User Interface
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,6 +128,6 @@ We would like to thank the Microverse team for their invaluable resources
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/torobucci/My-Portfolio/blob/main/MIT-LICENSE.txt) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
