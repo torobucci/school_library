@@ -71,7 +71,7 @@ Clone this repository to your desired folder:
 
 <ul>
 <li>cd my-folder</li>
-<li>git clone https://github.com/ZewdieMc/enumerable-ruby.git</li>
+<li>git clone https://github.com/torobucci/school_library.git</li>
 </ul>
 
 ### Install
