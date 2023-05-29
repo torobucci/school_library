@@ -21,6 +21,3 @@ def options(app)
     end
   end
 end
-
-
-
