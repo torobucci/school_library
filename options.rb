@@ -15,38 +15,12 @@ def options(app)
     number = gets.chomp.to_i
 
     if menu_options.key?(number)
-      send(menu_options[number], app)
+      app.send(menu_options[number])
     else
       puts 'Invalid option. Please try again.'
     end
   end
 end
 
-def list_all_books(app)
-  app.list_all_books
-end
 
-def list_all_people(app)
-  app.list_all_people
-end
 
-def create_person(app)
-  app.create_person
-end
-
-def create_book(app)
-  app.create_book
-end
-
-def create_rental(app)
-  app.create_rental
-end
-
-def list_rentals_of_person(app)
-  app.list_rentals_of_person
-end
-
-def exit_app(_)
-  puts 'Thank you for using this app!'
-  exit
-end

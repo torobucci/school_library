@@ -131,4 +131,9 @@ class App
       end
     end
   end
+
+  def exit_app
+    puts 'Thank you for using this app!'
+    exit
+  end
 end
