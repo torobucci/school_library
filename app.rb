@@ -3,7 +3,9 @@ require_relative './people/student'
 require_relative './people/teacher'
 require_relative './book'
 require_relative './rental'
+require_relative './userInput'
 class App
+  include UserInput
   attr_accessor :books, :people
 
   def initialize
@@ -32,8 +34,7 @@ class App
   end
 
   def create_person
-    print 'Do you want to create a student(1) or a teacher(2)? [Input the number]:'
-    choice = gets.chomp.to_i
+    choice = user_input(['Do you want to create a student(1) or a teacher(2)? [Input the number]']).to_i
 
     case choice
     when 1
@@ -47,35 +48,25 @@ class App
   end
 
   def create_student
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp
+    age, name, parent_permission = user_input(['Age', 'Name', 'Has parent permission? [Y/N]'])
     parent_permission = parent_permission.downcase != 'n'
-    student = Student.new(age, name, parent_permission: parent_permission)
+
+    student = Student.new(age.to_i, name, parent_permission: parent_permission)
     puts 'Person created successfully'
     @people << student
   end
 
   def create_teacher
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialization: '
-    specialization = gets.chomp
-    teacher = Teacher.new(age, specialization, name)
+    age, name, specialization = user_input(%w[Age Name Specialization])
+
+    teacher = Teacher.new(age.to_i, specialization, name)
     puts 'Person created successfully'
     @people << teacher
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
+    title, author = user_input(%w[Title Author])
+
     book = Book.new(title, author)
     puts 'Book created successfully'
     @books << book
@@ -89,13 +80,13 @@ class App
       display_books
 
       if @people.empty?
-        puts 'No persons created. Kindly create person before renting'
+        puts 'No persons created. Kindly create a person before renting'
       else
         puts 'Select a person from the following list (not id)'
         display_people
 
-        print 'Date: '
-        date = gets.chomp
+        date = user_input(['Date'])
+
         Rental.new(date, @selected_book, @selected_person)
         puts 'Rental created successfully'
       end
@@ -119,9 +110,8 @@ class App
   end
 
   def list_rentals_of_person
-    print 'ID of Person: '
-    id = gets.chomp.to_i
-    person_selected = @people.select { |person| person.id == id }.first
+    id = user_input(['ID of Person'])
+    person_selected = @people.select { |person| person.id == id.to_i }.first
     if person_selected.nil?
       puts 'No such person exists'
     else
@@ -130,5 +120,10 @@ class App
         puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
       end
     end
+  end
+
+  def exit_app
+    puts 'Thank you for using this app!'
+    exit
   end
 end

@@ -98,6 +98,15 @@ To run the project, execute the following command:
 - GitHub: [@torobucii](https://github.com/torobucci)
 - Twitter: [@torobucii](https://twitter.com/@torobucii)
 - LinkedIn: [Kevin Toro](https://www.linkedin.com/in/kevin-toro-047181238/)
+
+
+👤 **Peter Okorafor**
+
+- GitHub: [Peter Okorafor](https://github.com/peterdtitan)
+- Twitter: [PeterDeTitan](https://twitter.com/PeterDeTitan)
+- LinkedIn: [Peter OKorafor](https://linkedin.com/in/peterokorafor)
+
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Simple User Interface
