@@ -3,7 +3,7 @@ require_relative './people/student'
 require_relative './people/teacher'
 require_relative './book'
 require_relative './rental'
-require_relative './userInput.rb'
+require_relative './userInput'
 class App
   include UserInput
   attr_accessor :books, :people
@@ -57,7 +57,7 @@ class App
   end
 
   def create_teacher
-    age, name, specialization = user_input(['Age', 'Name', 'Specialization'])
+    age, name, specialization = user_input(%w[Age Name Specialization])
 
     teacher = Teacher.new(age.to_i, specialization, name)
     puts 'Person created successfully'
@@ -65,7 +65,7 @@ class App
   end
 
   def create_book
-    title, author = user_input(['Title', 'Author'])
+    title, author = user_input(%w[Title Author])
 
     book = Book.new(title, author)
     puts 'Book created successfully'
@@ -127,4 +127,3 @@ class App
     exit
   end
 end
-
