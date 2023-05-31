@@ -1,0 +1,5 @@
+[
+  "{\"date\":\"10/10/2020\",\"book\":\"{\\\"title\\\":\\\"breaking bad\\\",\\\"author\\\":\\\"vince gilligan\\\"}\",\"person\":\"{\\\"type\\\":\\\"Student\\\",\\\"id\\\":17,\\\"age\\\":25,\\\"name\\\":\\\"kevin\\\",\\\"parent_permission\\\":false}\"}",
+  "{\"date\":\"10/10/2024\",\"book\":\"{\\\"title\\\":\\\"breaking bad\\\",\\\"author\\\":\\\"vince gilligan\\\"}\",\"person\":\"{\\\"type\\\":\\\"Student\\\",\\\"id\\\":17,\\\"age\\\":25,\\\"name\\\":\\\"kevin\\\",\\\"parent_permission\\\":false}\"}",
+  "{\"date\":\"10/07/2015\",\"book\":\"{\\\"title\\\":\\\"GOT\\\",\\\"author\\\":\\\"george RR\\\"}\",\"person\":\"{\\\"type\\\":\\\"Student\\\",\\\"id\\\":29,\\\"age\\\":23,\\\"name\\\":\\\"toro\\\",\\\"parent_permission\\\":false}\"}"
+]

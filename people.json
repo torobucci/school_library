@@ -1,3 +1,5 @@
 [
-  "{\"type\":\"Teacher\",\"age\":22,\"name\":\"wew\",\"parent_permission\":true,\"specialization\":\"erer\"}"
+  "{\"type\":\"Student\",\"id\":17,\"age\":25,\"name\":\"kevin\",\"parent_permission\":false}",
+  "{\"type\":\"Student\",\"id\":29,\"age\":23,\"name\":\"toro\",\"parent_permission\":false}",
+  "{\"type\":\"Teacher\",\"id\":99,\"age\":67,\"name\":\"samuel\",\"parent_permission\":true,\"specialization\":\"biology\"}"
 ]
