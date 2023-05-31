@@ -24,5 +24,14 @@ class Person < Nameable
     @name
   end
 
+  def to_json(*args)
+    {
+      'type' => self.class.name,
+      'age' => @age,
+      'name' => @name,
+      'parent_permission' => @parent_permission
+    }.to_json(*args)
+  end
+
   private :of_age?
 end
