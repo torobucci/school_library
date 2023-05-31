@@ -4,9 +4,13 @@ require_relative './people/teacher'
 require_relative './book'
 require_relative './rental'
 require_relative './user_input'
+require_relative './Modules/load_data'
+require_relative './Modules/save_data'
 require 'json'
 class App
   include UserInput
+  include LoadData
+  include SaveData
   attr_accessor :books, :people
 
   def initialize
@@ -126,47 +130,9 @@ class App
   end
 
   def exit_app
-    save_books
-    save_people
-    # save_rentals
+    save_data
     puts 'Thank you for using this app!'
     exit
-  end
-
-  def load_books
-    if File.exist?('./books.json') && !File.zero?('./books.json')
-      json_data = File.read('./books.json')
-      @books = JSON.parse(json_data).map { |book_data| Book.from_json(book_data) }
-    end
-  end
-
-  def save_books
-    File.open('./books.json', 'w') do |file|
-      json_data = JSON.pretty_generate(@books.map(&:to_json))
-      file.write(json_data)
-    end
-  end
-
-  def save_people
-    File.open('./people.json', 'w') do |file|
-      json_data = JSON.pretty_generate(@people.map(&:to_json))
-      file.write(json_data)
-    end
-  end
-
-  def load_people
-    if File.exist?('./people.json') && !File.zero?('./people.json')
-      json_data = File.read('./people.json')
-      parsed_data = JSON.parse(json_data)
-      @people = parsed_data.map do |person_data|
-        case JSON.parse(person_data)['type']
-        when 'Student'
-          Student.from_json(person_data)
-        when 'Teacher'
-          Teacher.from_json(person_data)
-        end
-      end
-    end
   end
 
 end
