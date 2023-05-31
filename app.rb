@@ -3,7 +3,8 @@ require_relative './people/student'
 require_relative './people/teacher'
 require_relative './book'
 require_relative './rental'
-require_relative './userInput'
+require_relative './user_input'
+require 'json'
 class App
   include UserInput
   attr_accessor :books, :people
@@ -11,6 +12,7 @@ class App
   def initialize
     @books = []
     @people = []
+    @rentals = []
   end
 
   def list_all_books
@@ -28,7 +30,7 @@ class App
       puts 'No person created'
     else
       @people.each do |person|
-        puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+        puts "[#{person.class}] Name: #{person.name}', ID: #{person.id}, Age: #{person.age}"
       end
     end
   end
@@ -87,7 +89,7 @@ class App
 
         date = user_input(['Date'])
 
-        Rental.new(date, @selected_book, @selected_person)
+        @rentals << Rental.new(date, @selected_book, @selected_person)
         puts 'Rental created successfully'
       end
     end
@@ -111,19 +113,60 @@ class App
 
   def list_rentals_of_person
     id = user_input(['ID of Person'])
-    person_selected = @people.select { |person| person.id == id.to_i }.first
-    if person_selected.nil?
-      puts 'No such person exists'
+    rentals = @rentals.filter { |rental| rental.person.id == id.to_i }
+
+    if rentals.empty?
+      puts 'There are currently no rentals for this person!'
     else
-      puts 'Rentals: '
-      person_selected.rentals.map do |rental|
+      puts 'Rentals:'
+      rentals.each do |rental|
         puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
       end
     end
   end
 
   def exit_app
+    save_books
+    save_people
+    # save_rentals
     puts 'Thank you for using this app!'
     exit
   end
+
+  def load_books
+    if File.exist?('./books.json') && !File.zero?('./books.json')
+      json_data = File.read('./books.json')
+      @books = JSON.parse(json_data).map { |book_data| Book.from_json(book_data) }
+    end
+  end
+
+  def save_books
+    File.open('./books.json', 'w') do |file|
+      json_data = JSON.pretty_generate(@books.map(&:to_json))
+      file.write(json_data)
+    end
+  end
+
+  def save_people
+    File.open('./people.json', 'w') do |file|
+      json_data = JSON.pretty_generate(@people.map(&:to_json))
+      file.write(json_data)
+    end
+  end
+
+  def load_people
+    if File.exist?('./people.json') && !File.zero?('./people.json')
+      json_data = File.read('./people.json')
+      parsed_data = JSON.parse(json_data)
+      @people = parsed_data.map do |person_data|
+        case JSON.parse(person_data)['type']
+        when 'Student'
+          Student.from_json(person_data)
+        when 'Teacher'
+          Teacher.from_json(person_data)
+        end
+      end
+    end
+  end
+
 end
