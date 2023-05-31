@@ -12,6 +12,7 @@ class Teacher < Person
   def to_json(*args)
     {
       'type' => self.class.name,
+      'id' => @id,
       'age' => @age,
       'name' => @name,
       'parent_permission' => @parent_permission,
@@ -21,6 +22,8 @@ class Teacher < Person
 
   def self.from_json(json_data)
     parsed_data = JSON.parse(json_data)
-    self.new(parsed_data['age'], parsed_data['specialization'], parsed_data['name'])
+    teacher = self.new(parsed_data['age'], parsed_data['specialization'], parsed_data['name'])
+    teacher.id = parsed_data['id'].to_i
+    teacher
   end
 end
