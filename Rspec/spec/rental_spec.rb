@@ -28,7 +28,7 @@ describe Rental do
       json_data = rental.to_json
 
       expect(json_data).to be_a(String)
-      
+
       parsed_data = JSON.parse(json_data)
       expect(parsed_data['date']).to eq(date)
       expect(parsed_data['book']).to be_a(String)

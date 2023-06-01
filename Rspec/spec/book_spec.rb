@@ -1,6 +1,6 @@
 require 'json'
 require 'rspec'
-require_relative '../../book.rb'
+require_relative '../../book'
 
 describe Book do
   let(:title) { 'Breaking Bad' }
