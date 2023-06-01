@@ -25,8 +25,6 @@ class Rental
     Rental.new(rental_data['date'], book, person)
   end
 
-  private
-
   def self.find_book_by_title(title, books)
     books.find { |book| book.title == title }
   end
@@ -34,5 +32,4 @@ class Rental
   def self.find_person_by_id(id, people)
     people.find { |person| person.id == id.to_i }
   end
-
 end

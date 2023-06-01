@@ -22,7 +22,7 @@ class Teacher < Person
 
   def self.from_json(json_data)
     parsed_data = JSON.parse(json_data)
-    teacher = self.new(parsed_data['age'], parsed_data['specialization'], parsed_data['name'])
+    teacher = new(parsed_data['age'], parsed_data['specialization'], parsed_data['name'])
     teacher.id = parsed_data['id'].to_i
     teacher
   end

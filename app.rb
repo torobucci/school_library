@@ -134,5 +134,4 @@ class App
     puts 'Thank you for using this app!'
     exit
   end
-
 end

@@ -16,7 +16,6 @@ class Book
 
   def self.from_json(json)
     data = JSON.parse(json)
-    self.new(data['title'], data['author'])
+    new(data['title'], data['author'])
   end
-  
 end
