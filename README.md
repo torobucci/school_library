@@ -29,7 +29,7 @@
 
 # 📖  <a name="about-project">School library</a>
 
-Simple School library built based on classes and OOP priciples
+Simple School library built based on classes and OOP priciples. The projects lets a user add books to the library, list all the books in the library, add rentals to the books and list all the rentals in the library. You can also create objects such as a student or teacher with permissions to rent books from the library.
 
 ## 🛠 Built With <a name="built-with"></a>
 

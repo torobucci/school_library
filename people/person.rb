@@ -1,7 +1,6 @@
 require_relative '../nameable'
 class Person < Nameable
-  attr_reader :id
-  attr_accessor :name, :age, :rentals
+  attr_accessor :name, :age, :rentals, :id
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -22,6 +21,16 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def to_json(*args)
+    {
+      'type' => self.class.name,
+      'id' => @id,
+      'age' => @age,
+      'name' => @name,
+      'parent_permission' => @parent_permission
+    }.to_json(*args)
   end
 
   private :of_age?
