@@ -117,7 +117,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ZewdieMc/enumberable-ruby/issues).
+Feel free to check the [issues page](https://github.com/torobucci/school_library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
