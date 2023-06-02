@@ -10,8 +10,8 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 School Library](#--school-library)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖  School library](#--school-library)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -87,7 +87,13 @@ Install this project with:
 To run the project, execute the following command:
 
 <ul>
-<li>ruby mylist.rb</li>
+<li>ruby main.rb</li>
+</ul>
+
+To run tests navigate to Rspec/spec folder then execute the following command:
+e.g for rental_spec.rb file
+<ul>
+<li>rspec ./rental_spec.rb</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -117,7 +123,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ZewdieMc/enumberable-ruby/issues).
+Feel free to check the [issues page](https://github.com/torobucci/school_library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,6 +143,6 @@ We would like to thank the Microverse team for their invaluable resources
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/torobucci/My-Portfolio/blob/main/MIT-LICENSE.txt) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
