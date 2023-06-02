@@ -2,7 +2,6 @@ require 'json'
 require 'rspec'
 require_relative '../../people/person'
 
-
 describe Person do
   let(:age) { 20 }
   let(:name) { 'John Doe' }
