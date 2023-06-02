@@ -90,6 +90,12 @@ To run the project, execute the following command:
 <li>ruby main.rb</li>
 </ul>
 
+To run tests navigate to Rspec/spec folder then execute the following command:
+e.g for rental_spec.rb file
+<ul>
+<li>rspec ./rental_spec.rb</li>
+</ul>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
