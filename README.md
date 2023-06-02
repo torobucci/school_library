@@ -10,8 +10,8 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 School Library](#--school-library)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖  School library](#--school-library)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -87,7 +87,7 @@ Install this project with:
 To run the project, execute the following command:
 
 <ul>
-<li>ruby mylist.rb</li>
+<li>ruby main.rb</li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
